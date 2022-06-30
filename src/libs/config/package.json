@@ -1,0 +1,13 @@
+{
+  "name": "@pvm/config",
+  "version": "0.0.0-stub",
+  "exports": "./index.js",
+  "dependencies": {
+    "@pvm/types": "0.0.0-stub",
+    "@pvm/logger": "0.0.0-stub",
+    "@iarna/toml": "^2.2.5",
+    "ajv": "^6.12.2",
+    "cosmiconfig": "^6.0.0",
+    "json5": "^2.2.1"
+  }
+}

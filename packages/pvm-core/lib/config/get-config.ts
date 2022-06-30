@@ -213,7 +213,7 @@ function validateAgainstSchema(config: Config): void {
   let compiledSchema = compiledSchemaMap.get(config.cwd)
   if (!compiledSchema) {
     const ajv = new Ajv()
-    const schema = TOML.parse(require('../../config-schema.json'))
+    const schema = TOML.parse(require('@pvm/types/lib/config-schema.json'))
     compiledSchema = ajv.compile(schema)
     compiledSchemaMap.set(config.cwd, compiledSchema)
   }

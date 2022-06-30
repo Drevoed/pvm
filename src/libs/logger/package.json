@@ -1,0 +1,10 @@
+{
+  "name": "@pvm/logger",
+  "version": "0.0.0-stub",
+  "description": "Logger for internal usage",
+  "exports": "./index.js",
+  "dependencies": {
+    "@pvm/env": "0.0.0-stub",
+    "signales": "^2.0.5"
+  }
+}

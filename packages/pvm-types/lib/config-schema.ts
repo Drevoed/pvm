@@ -1,4 +1,5 @@
-import type { MessengerClientConfig } from '@pvm/types'
+import type { MessengerClientConfig } from 'pvm-types/lib/index'
+import type { PluginConfig } from './plugins'
 
 type GlobPattern = string
 type PkgFlexGlobs = GlobPattern[] | '*'
@@ -425,6 +426,7 @@ export interface Config {
     load_first: string[],
     options: Record<string, Record<string, string>>,
   },
+  plugins_v2: PluginConfig[],
   templating: {
     /**
      *  Use shot package names ("short" means without namespace part)

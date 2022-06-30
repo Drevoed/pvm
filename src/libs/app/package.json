@@ -1,0 +1,12 @@
+{
+  "name": "@pvm/app",
+  "version": "0.0.0-stub",
+  "exports": "./index.js",
+  "dependencies": {
+    "@pvm/di": "0.0.0-stub",
+    "@pvm/tokens-common": "0.0.0-stub",
+    "@pvm/types": "0.0.0-stub",
+    "@pvm/config": "0.0.0-stub",
+    "bin-version-check": "^4.0.0"
+  }
+}

@@ -4,7 +4,7 @@ import EnvJsonSchema from '@pvm/types/lib/env-schema.json'
 
 import type { ValidateFunction } from 'ajv'
 import type { Env } from '@pvm/types'
-import { envDefaults } from '../env-defaults'
+import { defaultEnvs } from './default-envs'
 
 let envsCache: Env
 let compiledSchema: ValidateFunction
@@ -43,7 +43,7 @@ export function getEnv(): Env {
   // eslint-disable-next-line pvm/no-process-env
   const envs = process.env
 
-  for (const [name, env] of Object.entries(envDefaults)) {
+  for (const [name, env] of Object.entries(defaultEnvs)) {
     if (envs[name] === undefined) {
       envs[name] = env
     }

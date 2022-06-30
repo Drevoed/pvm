@@ -1,0 +1,8 @@
+{
+  "name": "@pvm/di",
+  "version": "0.0.0-stub",
+  "exports": "./index.js",
+  "dependencies": {
+    "@fridgefm/inverter": "^0.1.16"
+  }
+}

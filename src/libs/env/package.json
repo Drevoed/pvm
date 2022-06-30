@@ -1,0 +1,11 @@
+{
+  "name": "@pvm/env",
+  "version": "0.0.0-stub",
+  "description": "Env manager for internal usage",
+  "exports": "./index.js",
+  "dependencies": {
+    "@pvm/types": "0.0.0-stub",
+    "ajv": "^6.12.6",
+    "chalk": "^4.1.2"
+  }
+}
