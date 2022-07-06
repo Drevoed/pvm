@@ -1,0 +1,5 @@
+{
+  "name": "@pvm/types-vcs",
+  "version": "0.0.0-stub",
+  "exports": "./index.js"
+}

@@ -1,0 +1,10 @@
+{
+  "name": "@pvm/platform",
+  "version": "0.0.0-stub",
+  "exports": "./index.js",
+  "dependencies": {
+    "@pvm/types-platform": "0.0.0-stub",
+    "@pvm/logger": "0.0.0-stub",
+    "string-to-color": "^2.2.2"
+  }
+}

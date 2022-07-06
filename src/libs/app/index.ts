@@ -1,7 +1,7 @@
 import path from 'path'
 import type { PluginConfig, PluginFactory, Config, RecursivePartial } from '@pvm/types'
 import { Container, DI_TOKEN, provide } from '@pvm/di'
-import { CONFIG, CONFIG_EXTENSION_TOKEN, CWD_TOKEN, REPO_TOKEN } from '@pvm/tokens-common'
+import { CONFIG_EXTENSION_TOKEN, CONFIG_TOKEN, CWD_TOKEN, REPO_TOKEN } from '@pvm/tokens-common'
 import { loadRawConfig, migrateDeprecated, readConfigFromEnv, validateAgainstSchema } from '@pvm/config'
 import { defaultConfig } from './default-config'
 
@@ -70,7 +70,7 @@ export class Pvm {
 
     this.container.register(provide({
       useValue: this.fulfillConfig(),
-      provide: CONFIG,
+      provide: CONFIG_TOKEN,
     }))
   }
 

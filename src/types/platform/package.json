@@ -1,0 +1,8 @@
+{
+  "name": "@pvm/types-platform",
+  "version": "0.0.0-stub",
+  "exports": "./index.js",
+  "dependencies": {
+    "@pvm/types-vcs": "0.0.0-stub"
+  }
+}

@@ -12,6 +12,7 @@
       "src/tokens/*",
       "src/plugins/*",
       "src/libs/*",
+      "src/types/*",
       "tools/*"
     ]
   },
