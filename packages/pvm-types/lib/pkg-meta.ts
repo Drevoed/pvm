@@ -1,6 +1,3 @@
-export type SemverReleaseType = 'prerelease' | 'prepatch' | 'patch' | 'preminor' | 'minor' | 'premajor' | 'major'
-export type PvmReleaseType = 'none' | SemverReleaseType
-
 export type PkgDeps = Record<string, string>
 
 export interface PublishConfig {
@@ -30,13 +27,4 @@ export interface PkgMeta {
 
 export interface PkgAppliedMeta extends PkgMeta {
   version: string,
-}
-
-export interface UpdateHints {
-  'release-type'?: PvmReleaseType,
-  'release-types'?: Partial<Record<PvmReleaseType, string | string[]>>,
-  'update-dependants-for'?: Array<{
-    match: string,
-    'release-type': PvmReleaseType | 'as-dep',
-  }>,
 }

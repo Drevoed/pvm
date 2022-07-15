@@ -4,7 +4,7 @@
   "exports": "./index.js",
   "dependencies": {
     "@hutson/parse-repository-url": "^5.0.0",
-    "@pvm/git": "0.0.0-stub",
+    "@pvm/lib-core": "0.0.0-stub",
     "@pvm/tokens-common": "0.0.0-stub",
     "@pvm/platform": "0.0.0-stub",
     "@pvm/types-vcs": "0.0.0-stub",
@@ -25,8 +25,5 @@
     "string-to-color": "^2.0.1",
     "octokit": "^1.7.0",
     "hosted-git-info": "^3.0.2"
-  },
-  "devDependencies": {
-    "dotenv": "^10.0.0"
   }
 }

@@ -1,5 +1,5 @@
-import type { MessengerClientConfig } from 'pvm-types/lib/index'
-import type { PluginConfig } from './plugins'
+import type { MessengerClientConfig } from './index'
+import type { PluginConfig } from './di'
 
 type GlobPattern = string
 type PkgFlexGlobs = GlobPattern[] | '*'

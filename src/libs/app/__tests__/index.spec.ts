@@ -1,7 +1,7 @@
 import { Pvm } from '../index'
 import { provide } from '@pvm/di'
 import path from 'path'
-import { CONFIG, CONFIG_EXTENSION_TOKEN } from '@pvm/tokens-common'
+import { CONFIG_TOKEN, CONFIG_EXTENSION_TOKEN } from '@pvm/tokens-common'
 
 describe('@pvm/container', () => {
   afterAll(() => {
@@ -51,7 +51,7 @@ describe('@pvm/container', () => {
       },
     })
 
-    expect(pvmContainer.container.get(CONFIG)).toMatchObject({
+    expect(pvmContainer.container.get(CONFIG_TOKEN)).toMatchObject({
       plugins_v2: [{
         plugin: path.join(__dirname, '__fixtures__', 'plugin-with-config-with-plugins.js'),
       }, {
@@ -75,7 +75,7 @@ describe('@pvm/container', () => {
       },
     })
 
-    expect(pvmContainer.container.get(CONFIG).mark_pr.analyze_update).toBe(true)
+    expect(pvmContainer.container.get(CONFIG_TOKEN).mark_pr.analyze_update).toBe(true)
   })
 
   it('should give user config priority against plugins', () => {
@@ -102,6 +102,6 @@ describe('@pvm/container', () => {
       },
     })
 
-    expect(pvmContainer.container.get(CONFIG).mark_pr.analyze_update).toBe(false)
+    expect(pvmContainer.container.get(CONFIG_TOKEN).mark_pr.analyze_update).toBe(false)
   })
 })

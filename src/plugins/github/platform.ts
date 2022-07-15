@@ -17,11 +17,11 @@ import { PlatformResult } from '@pvm/types-vcs'
 import type { Config } from '@pvm/types'
 import hostedGitInfo from 'hosted-git-info'
 import { env } from '@pvm/env'
-import { releaseTagFilter, getCurrentBranchIgnoreEnv, getHostUrl } from '@pvm/git'
+import { releaseTagFilter } from '@pvm/lib-core/tag-meta'
+import { getCurrentBranchIgnoreEnv, getHostUrl } from '@pvm/lib-core/git/commands'
 import { log } from './logger'
 import { gracefullyTruncateText } from '@pvm/core/lib/utils/string'
-
-import { cwdShell, wdShell } from '@pvm/core'
+import { wdShell } from '@pvm/lib-core'
 
 export const AuthenticationStrategy = {
   'authApp': createAppAuth,
@@ -404,7 +404,7 @@ export class GithubPlatform extends PlatformInterface<PullRequest> {
   }
 
   getCommitSha(): string {
-    return env.GITHUB_SHA ?? cwdShell('git rev-parse HEAD')
+    return env.GITHUB_SHA ?? wdShell(this.repoDir, 'git rev-parse HEAD')
   }
 
   async getUpdateHintsByCommit(_commit: string): Promise<Record<string, any> | null> {
